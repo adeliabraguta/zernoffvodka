@@ -1,0 +1,199 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #222222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+.small_desc {
+    font-size: 16px;
+    color: #777;
+}
+
+.big_desc {
+    font-size: 48px;
+    letter-spacing: 1px;
+    @media screen and (max-width: 800px) {
+        font-size: 36px;
+    }
+}
+
+
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: #111;
+
+    }
+}
+
+.drinks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transition: 200ms;
+    gap: 32px;
+
+
+    .drink {
+        height: 460px;
+        cursor: pointer;
+        padding: 0 48px 32px 48px;
+        display: grid;
+        border: 1px solid #999;
+        grid-template-rows: min-content;
+        transition: all 0.3s ease;
+
+        figure {
+            height: 400px;
+            width: 200px;
+            padding-bottom: 12px;
+        }
+
+        figure img {
+            object-fit: contain;
+            width: 200px;
+            height: 400px;
+        }
+
+        &:hover {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+    }
+
+    .drink_details {
+        visibility: hidden;
+        display: grid;
+        grid-auto-rows: min-content;
+        padding-top: 32px;
+        gap: 12px;
+        opacity: 0;
+        height: 0;
+        width: 0;
+        p {
+            line-height: 28px;
+        }
+    }
+
+    .brand {
+        padding-top: 12px;
+        border-top: 1px solid #999;
+        width: min-content;
+        height: min-content;
+    }
+}
+
+
+.drinks:has(.drink.show:nth-of-type(3n+1)) {
+    grid-template-columns: 1fr 0.4fr 0.4fr;
+
+
+    .drink.show:nth-of-type(3n+1) {
+        grid-template-columns: 0.5fr 1fr;
+        grid-row: 1 / span 2;
+
+        .drink_details {
+            visibility: visible;
+            width: initial;
+            height: initial;
+            opacity: 1;
+            transition: 200ms;
+            transition-delay: 300ms;
+        }
+    }
+}
+
+.drinks:has(.drink.show:nth-of-type(3n+2)) {
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+
+    .drink.show:nth-of-type(3n+2) {
+        grid-template-columns: 0.5fr 1fr;
+        /*grid-column: 2 / span 3;*/
+
+        .drink_details {
+            visibility: visible;
+            width: initial;
+            height: initial;
+            opacity: 1;
+            transition: 200ms;
+            transition-delay: 300ms;
+        }
+    }
+}
+
+.drinks:has(.drink.show:nth-of-type(3n+3)) {
+    grid-template-columns: 0.5fr 0.5fr 1fr;
+
+    .drink.show:nth-of-type(3n+3) {
+        grid-template-columns: 0.5fr 1fr;
+        /*grid-column: 2 / span 3;*/
+
+        .drink_details {
+            visibility: visible;
+            width: initial;
+            height: initial;
+            opacity: 1;
+            transition: 200ms;
+            transition-delay: 300ms;
+        }
+    }
+}
+.drinks-mobile {
+    display: none;
+}
+.container {
+    padding: 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+    @media screen and (max-width: 800px) {
+        padding: 48px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .drinks{
+        display: none;
+    }
+    .drinks-mobile {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+
+
+        .drink {
+            cursor: pointer;
+            padding: 0 48px 32px 48px;
+            display: grid;
+            border: 1px solid #999;
+            grid-template-rows: min-content;
+            transition: all 0.3s ease;
+
+            figure {
+                padding: 12px;
+                height: 300px;
+                width: 200px;
+            }
+
+            figure img {
+                object-fit: contain;
+                width: 200px;
+                height: 300px;
+            }
+
+            &:hover {
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            }
+        }
+    }
+
+}
