@@ -295,41 +295,41 @@ export const brands = [{
     src: campohLogo
 },{
     id: 3,
-    src: zernoffLogo
+    src: gospodarLogo
 },{
     id: 4,
-    src: zernoffLogo
+    src: jacksonLogo
 },{
     id: 5,
-    src: zernoffLogo
+    src: mamboLogo
 },{
     id: 6,
-    src: zernoffLogo
+    src: mendeleevLogo
 },{
     id: 7,
-    src: zernoffLogo
+    src: nuculLogo
 },{
     id: 8,
-    src: zernoffLogo
+    src: personaLogo
 },{
     id: 9,
-    src: zernoffLogo
+    src: petrovskaiaLogo
 },{
     id: 10,
-    src: zernoffLogo
+    src: psenicinaiaLogo
 },{
     id: 11,
-    src: zernoffLogo
+    src: rihardsLogo
 },{
     id: 12,
-    src: zernoffLogo
+    src: russkaiaLogo
 },{
     id: 13,
-    src: zernoffLogo
+    src: secaricaLogo
 },{
     id: 14,
-    src: zernoffLogo
+    src: spiculLogo
 },{
     id: 15,
-    src: zernoffLogo
+    src: parrotLogo
 }]

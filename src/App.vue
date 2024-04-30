@@ -1,7 +1,7 @@
 <script setup>
-import Header from "./components/Header.vue";
-import Footer from "./components/Footer.vue";
-import Popup from "./components/Popup.vue";
+import Header from "./components/HeaderComponent.vue";
+import Footer from "./components/FooterComponent.vue";
+import Popup from "./components/ageVerificationComponent.vue";
 import {ref} from "vue";
 
 const agreed = ref(sessionStorage.getItem('agreed') || false)

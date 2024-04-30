@@ -6,13 +6,12 @@ import {createRouter, createWebHistory} from "vue-router";
 const router = createRouter({
     history: createWebHistory(),
     routes:  [
-        {path: '/zernoffvodka/', name: 'MainPage', component: () => import('./components/MainPage.vue')},
-        {path: '/zernoffvodka/catalog', name: 'catalog', component: () => import('./components/Catalog.vue')},
-        {path: `/zernoffvodka/catalog/:id`, name: 'drink', component: () => import('./components/Drink.vue')},
-        {path: `/zernoffvodka/companie`, name: 'about', component: () => import('./components/About.vue')},
-        {path: `/zernoffvodka/news`, name: 'news', component: () => import('./components/News.vue')},
-        {path: `/zernoffvodka/post/:id`, name: 'post', component: () => import('./components/Post.vue')},
-        {path: '/zernoffvodka/contacts', name: 'contacts', component: () => import('./components/Contacts.vue')}
+        {path: '/zernoffvodka/', name: 'MainPage', component: () => import('./components/pages/MainPage.vue')},
+        {path: '/zernoffvodka/catalog', name: 'catalog', component: () => import('./components/pages/CatalogPage.vue')},
+        {path: `/zernoffvodka/companie`, name: 'about', component: () => import('./components/pages/AboutPage.vue')},
+        {path: `/zernoffvodka/news`, name: 'news', component: () => import('./components/pages/NewsPage.vue')},
+        {path: `/zernoffvodka/post/:id`, name: 'post', component: () => import('./components/pages/PostPage.vue')},
+        {path: '/zernoffvodka/contacts', name: 'contacts', component: () => import('./components/pages/ContactsPage.vue')}
     ],
     scrollBehavior(to, from, savedPosition) {
         return new Promise((resolve, reject) => {

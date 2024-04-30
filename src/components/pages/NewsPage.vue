@@ -1,5 +1,5 @@
 <script setup>
-import {newsArray} from "./data/data.js";
+import {newsArray} from "../data/data.js";
 </script>
 
 <template>

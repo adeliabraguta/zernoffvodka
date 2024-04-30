@@ -25,7 +25,6 @@
 }
 
 
-
 a {
     text-decoration: none;
     color: #333;
@@ -38,119 +37,6 @@ a {
     }
 }
 
-.drinks {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    transition: 200ms;
-    gap: 32px;
-
-
-    .drink {
-        height: 460px;
-        cursor: pointer;
-        padding: 0 48px 32px 48px;
-        display: grid;
-        border: 1px solid #999;
-        grid-template-rows: min-content;
-        transition: all 0.3s ease;
-
-        figure {
-            height: 400px;
-            width: 200px;
-            padding-bottom: 12px;
-        }
-
-        figure img {
-            object-fit: contain;
-            width: 200px;
-            height: 400px;
-        }
-
-        &:hover {
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-        }
-    }
-
-    .drink_details {
-        visibility: hidden;
-        display: grid;
-        grid-auto-rows: min-content;
-        padding-top: 32px;
-        gap: 12px;
-        opacity: 0;
-        height: 0;
-        width: 0;
-        p {
-            line-height: 28px;
-        }
-    }
-
-    .brand {
-        padding-top: 12px;
-        border-top: 1px solid #999;
-        width: min-content;
-        height: min-content;
-    }
-}
-
-
-.drinks:has(.drink.show:nth-of-type(3n+1)) {
-    grid-template-columns: 1fr 0.4fr 0.4fr;
-
-
-    .drink.show:nth-of-type(3n+1) {
-        grid-template-columns: 0.5fr 1fr;
-        grid-row: 1 / span 2;
-
-        .drink_details {
-            visibility: visible;
-            width: initial;
-            height: initial;
-            opacity: 1;
-            transition: 200ms;
-            transition-delay: 300ms;
-        }
-    }
-}
-
-.drinks:has(.drink.show:nth-of-type(3n+2)) {
-    grid-template-columns: 0.5fr 1fr 0.5fr;
-
-    .drink.show:nth-of-type(3n+2) {
-        grid-template-columns: 0.5fr 1fr;
-        /*grid-column: 2 / span 3;*/
-
-        .drink_details {
-            visibility: visible;
-            width: initial;
-            height: initial;
-            opacity: 1;
-            transition: 200ms;
-            transition-delay: 300ms;
-        }
-    }
-}
-
-.drinks:has(.drink.show:nth-of-type(3n+3)) {
-    grid-template-columns: 0.5fr 0.5fr 1fr;
-
-    .drink.show:nth-of-type(3n+3) {
-        grid-template-columns: 0.5fr 1fr;
-        /*grid-column: 2 / span 3;*/
-
-        .drink_details {
-            visibility: visible;
-            width: initial;
-            height: initial;
-            opacity: 1;
-            transition: 200ms;
-            transition-delay: 300ms;
-        }
-    }
-}
-.drinks-mobile {
-    display: none;
-}
 .container {
     padding: 96px;
     display: flex;
@@ -160,40 +46,83 @@ a {
         padding: 48px;
     }
 }
-@media screen and (max-width: 800px) {
-    .drinks{
-        display: none;
+
+.back_button, .next_button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    .feather {
+        stroke: #444;
+        width: 50px;
+        height: 50px;
+        transition: all 0.3s ease;
     }
-    .drinks-mobile {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 32px;
 
+    &:hover {
+        .feather {
+            stroke: #222;
+        }
+    }
+}
 
-        .drink {
-            cursor: pointer;
-            padding: 0 48px 32px 48px;
-            display: grid;
-            border: 1px solid #999;
-            grid-template-rows: min-content;
-            transition: all 0.3s ease;
+.brands_section {
+    position: relative;
 
-            figure {
-                padding: 12px;
-                height: 300px;
-                width: 200px;
-            }
+    .brands_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-            figure img {
-                object-fit: contain;
-                width: 200px;
-                height: 300px;
-            }
-
-            &:hover {
-                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            }
+        p {
+            text-align: center;
+            width: 60vw;
         }
     }
 
+    .brands_gallery {
+        padding-top: 48px;
+        display: flex;
+        gap: 70px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+    }
+
+    .brands_gallery::-webkit-scrollbar {
+        display: none;
+    }
+
+    .market {
+        width: 200px;
+        height: 100px;
+        object-fit: contain;
+    }
+
+
+    @media screen and (max-width: 800px) {
+
+        .brands_title {
+            align-items: start;
+
+            p {
+                text-align: start;
+                width: initial;
+            }
+        }
+
+        .brands_gallery {
+            gap: 24px;
+        }
+
+        .brands_gallery img {
+            width: 100px;
+            height: auto;
+            object-fit: contain;
+        }
+    }
 }

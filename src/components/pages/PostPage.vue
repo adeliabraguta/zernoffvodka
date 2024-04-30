@@ -1,7 +1,7 @@
 <script setup>
 import {computed} from "vue";
 import {useRoute} from "vue-router";
-import {newsArray} from "./data/data.js";
+import {newsArray} from "../data/data.js";
 
 const postId = computed(() => parseInt(useRoute().params.id))
 const post = computed(() => newsArray.find(post => post.id === postId.value))

@@ -1,6 +1,6 @@
 <script setup>
-import DrinkComponent from "./DrinkComponent.vue";
-import {zernoffDrinks} from "./data/drinksData.js";
+import DrinkComponent from "../DrinkComponent.vue";
+import {zernoffDrinks} from "../data/drinksData.js";
 import {ref} from "vue";
 
 const isShow = ref({})

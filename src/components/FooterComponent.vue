@@ -9,7 +9,6 @@
         <RouterLink to="/zernoffvodka/companie">DESPRE NOI</RouterLink>
         <RouterLink to="/zernoffvodka/news">NOUTATI</RouterLink>
         <RouterLink to="/zernoffvodka/catalog">CATALOG</RouterLink>
-        <RouterLink to="/zernoffvodka/markets">UNDE CUMPARAM</RouterLink>
         <RouterLink to="/zernoffvodka/contacts">CONTACTE</RouterLink>
       </div>
       <div class="nav_social">
