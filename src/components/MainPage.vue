@@ -2,6 +2,7 @@
 import {computed, onMounted, ref} from "vue";
 import {brands, topDrinks} from "./data/drinksData.js";
 import {markets} from "./data/data.js";
+import DrinkComponent from "./DrinkComponent.vue";
 
 const brand = ref(null);
 const market = ref(null)
@@ -14,7 +15,7 @@ const next = (el) => {
     })
   } else {
     el.scrollBy({
-      left: 350,
+      left: 200,
       behavior: 'smooth'
     })
   }
@@ -28,7 +29,7 @@ const back = (el) => {
     })
   } else {
     el.scrollBy({
-      left: -350,
+      left: -200,
       behavior: 'smooth'
     })
   }
@@ -82,23 +83,7 @@ const toggle = (id) => {
         <div class="drinks">
           <div class="drink" v-for="drink of topDrinks" :key="drink.id" @click="()=> toggle(drink.id)"
                :class="{[`show`]: isShow[drink.id]}">
-            <div>
-              <div>
-                <figure><img v-bind:src="drink.img" :alt="drink.title"/></figure>
-              </div>
-              <span class="small_desc">{{ drink.type }}</span>
-              <p>{{ drink.title }}</p>
-            </div>
-            <div class="drink_details">
-              <span class="small_desc">Volum: {{ drink.volume }}</span>
-              <p>{{ drink.desc }}</p>
-              <b>Specificatii</b>
-              <div>
-                <p><span class="small_desc">Alcool -</span>{{ drink.specifications[0].alco }}</p>
-                <p><span class="small_desc">Cantitate in cutie -</span>{{ drink.specifications[0].cant }}</p>
-              </div>
-              <img class="brand" :src="drink.brand" :alt="drink.title"/>
-            </div>
+            <DrinkComponent :drink="drink"/>
           </div>
         </div>
         <div class="drinks-mobile">
@@ -337,6 +322,9 @@ const toggle = (id) => {
   }
 
   @media screen and (max-width: 800px) {
+    p{
+      width: 100%;
+    }
     div {
       figure {
 
@@ -420,6 +408,8 @@ const toggle = (id) => {
     object-fit: contain;
   }
 
+
+
   @media screen and (max-width: 800px) {
 
     .brands_title {
@@ -430,13 +420,15 @@ const toggle = (id) => {
         width: initial;
       }
     }
-
-    .brands_gallery {
-      display: none;
+    .brands_gallery{
+      gap: 24px;
+    }
+    .brands_gallery img{
+      width: 100px;
+      height: auto;
+      object-fit: contain;
     }
   }
-
-
 }
 
 </style>

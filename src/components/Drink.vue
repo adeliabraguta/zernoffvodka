@@ -4,7 +4,11 @@ import {useRoute} from "vue-router";
 import {zernoffDrinks} from "./data/drinksData.js";
 
 const drinkId = computed(() => parseInt(useRoute().params.id))
-const drink = computed(() => zernoffDrinks.find(drink => drink.id === drinkId.value))
+const drink = computed(() => {
+  return zernoffDrinks.map(drinks => {
+    return drinks.find(drink => drink.id === drinkId.value)
+  }).find(drink => drink !== undefined);
+})
 </script>
 
 <template>
@@ -57,6 +61,7 @@ const drink = computed(() => zernoffDrinks.find(drink => drink.id === drinkId.va
   figure img {
     width: 300px;
     height: 500px;
+    object-fit: contain;
   }
 
   .drink_desc {

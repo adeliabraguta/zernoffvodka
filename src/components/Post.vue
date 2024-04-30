@@ -66,4 +66,30 @@ const post = computed(() => newsArray.find(post => post.id === postId.value))
   }
 }
 
+@media screen and (max-width: 800px) {
+  .container {
+    height: initial;
+  }
+
+  .drink {
+    grid-template-columns: 1fr;
+
+    figure {
+      justify-self: center;
+      width: 300px;
+      height: 200px;
+      padding: 12px 24px;
+      display: flex;
+      flex-direction: column;
+      border: none;
+    }
+
+    figure img {
+      object-fit: cover;
+      width: 300px;
+      height: 250px;
+    }
+  }
+}
+
 </style>
