@@ -42,7 +42,7 @@ import MarketsComponent from "../MainPageComponents/MarketsComponent.vue";
   }
 
   @media screen and (max-width: 800px) {
-    padding: 48px;
+    padding: 90px 48px 48px 48px;
     height: 70vh;
   }
 }

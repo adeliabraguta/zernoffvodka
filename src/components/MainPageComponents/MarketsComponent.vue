@@ -25,5 +25,4 @@ const market = ref(null);
 </template>
 
 <style scoped>
-
 </style>

@@ -117,6 +117,7 @@ a {
 
         .brands_gallery {
             gap: 24px;
+            padding-top: 12px;
         }
 
         .brands_gallery img {
