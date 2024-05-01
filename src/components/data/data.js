@@ -15,6 +15,21 @@ import nr1 from "../../assets/markets/nr1.png"
 import tirex from "../../assets/markets/tirex.png"
 import velmart from "../../assets/markets/velmart.png"
 import vento from "../../assets/markets/vento.png"
+import cover from "../../assets/cover.webp"
+import cover2 from "../../assets/cover2.webp"
+import cover3 from "../../assets/cover3.webp"
+
+export const images = [{
+    id:1,
+    src: cover
+},{
+    id:2,
+    src: cover2
+},{
+    id:3,
+    src: cover3
+}]
+
 export const newsArray = [{
     id: 1,
     title: 'ZERNOFF FIVE GRAINS',
