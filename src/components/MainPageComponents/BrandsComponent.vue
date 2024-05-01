@@ -1,12 +1,21 @@
 <script setup>
 
-import {ref} from "vue";
-import {brands} from "../data/drinksData.js";
+import {onMounted, ref} from "vue";
+import {brandsArray} from "../data/drinksData.js";
 import BackButton from "./backButton.vue";
 import NextButton from "./nextButton.vue";
-import {back, next} from "./navFunctions.js";
+import {navigation} from "./navFunctions.js";
 
-const brand = ref(null);
+const brandsRef = ref(null)
+let slider, slideWidth, sliderWidth
+
+onMounted(() => {
+  slider = brandsRef.value
+  slideWidth = slider.children[0].offsetWidth
+  sliderWidth = slider.scrollWidth - slider.offsetWidth
+})
+
+
 </script>
 
 <template>
@@ -18,11 +27,15 @@ const brand = ref(null);
         vizează
         atingerea gustului de neegalat al mărcilor noastre.</p>
     </div>
-    <div class="brands_gallery" id="brands" ref="brand">
-      <img v-for="brand in brands" :src="brand.src" :alt="brand.id"/>
+    <div class="slider_container">
+      <div>
+        <div class="slider_gallery" ref="brandsRef">
+          <img v-for="brand in brandsArray" :src="brand.src" :alt="brand.id" class="slide"/>
+        </div>
+      </div>
     </div>
-    <BackButton @click="back(brand)"/>
-    <NextButton @click="next(brand)"/>
+    <BackButton #id="backBtn" @click="navigation('backBtn',slider,sliderWidth, slideWidth)"/>
+    <NextButton #id="nextBtn" @click="navigation('nextBtn',slider,sliderWidth, slideWidth)"/>
   </section>
 </template>
 

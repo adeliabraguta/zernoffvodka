@@ -82,20 +82,28 @@ a {
             width: 60vw;
         }
     }
+    .slider_container{
+        overflow: hidden;
+    }
 
-    .brands_gallery {
+    .slider_gallery {
         padding-top: 48px;
         display: flex;
-        gap: 70px;
-        overflow-x: auto;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+        position: relative;
+        left: 0px;
+        transition: all 0.3s ease;
+        .slide{
+            height: 100px;
+            aspect-ratio: 16/9;
+            padding-right: 50px;
+            object-fit: contain;
+            &:last-of-type{
+                padding-right: 0;
+            }
+        }
 
     }
 
-    .brands_gallery::-webkit-scrollbar {
-        display: none;
-    }
 
     .market {
         width: 200px;
@@ -115,12 +123,12 @@ a {
             }
         }
 
-        .brands_gallery {
+        .slider_gallery {
             gap: 24px;
             padding-top: 12px;
         }
 
-        .brands_gallery img {
+        .slider_gallery img {
             width: 100px;
             height: auto;
             object-fit: contain;

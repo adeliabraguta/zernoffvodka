@@ -26,7 +26,7 @@ defineProps({
         <p><span class="small_desc">Alcool -</span>{{ drink.specifications[0].alco }}</p>
         <p><span class="small_desc">Cantitate in cutie -</span>{{ drink.specifications[0].cant }}</p>
       </div>
-      <div class="brand">
+      <div class="slide">
         <img :src="drink.brand" :alt="drink.title"/>
       </div>
     </div>
@@ -77,7 +77,7 @@ figure:hover img {
     gap: 24px;
   }
 
-  .brand {
+  .slide {
     height: 100%;
     border-left: 1px solid #999;
     width: min-content;

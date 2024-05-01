@@ -287,7 +287,7 @@ export const zernoffDrinks = [[{
     }
 ]]
 
-export const brands = [{
+export const brandsArray = [{
     id: 1,
     src: zernoffLogo
 },{

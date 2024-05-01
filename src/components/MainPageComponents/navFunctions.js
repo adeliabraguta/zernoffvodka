@@ -1,27 +1,21 @@
-export const next = (el) => {
-    if (el.scrollLeft >= (el.scrollWidth - el.clientWidth)) {
-        el.scrollTo({
-            left: 0,
-            behavior: 'smooth'
-        })
-    } else {
-        el.scrollBy({
-            left: 200,
-            behavior: 'smooth'
-        })
-    }
-}
+export const navigation = (dir,slider, sliderWidth, slideWidth) => {
+    const distance = dir === "nextBtn" ? -slideWidth : slideWidth
+    !slider.style.left && (slider.style.left = `0px`)
 
-export const back = (el) => {
-    if (el.scrollLeft <= 0) {
-        el.scrollTo({
-            left: el.scrollWidth - el.clientWidth,
-            behavior: 'smooth'
-        })
+    const currentLeft = parseInt(slider.style.left)
+    let newLeft = currentLeft + distance
+
+    if (-newLeft > sliderWidth) {
+        slider.style.left = `${-sliderWidth}px`
+    } else if (newLeft > 0) {
+        slider.style.left = '0px'
     } else {
-        el.scrollBy({
-            left: -200,
-            behavior: 'smooth'
-        })
+        slider.style.left = `${newLeft}px`
+    }
+    if (dir === "nextBtn" && Math.abs(newLeft) >= sliderWidth) {
+        slider.style.left = '0px'
+    }
+    if (dir === "backBtn" && newLeft > 0) {
+        slider.style.left = `${-sliderWidth}px`
     }
 }

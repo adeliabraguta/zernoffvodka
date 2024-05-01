@@ -15,8 +15,8 @@ import MarketsComponent from "../MainPageComponents/MarketsComponent.vue";
     <AboutUsComponent/>
     <div class="container">
       <TopDrinksComponent/>
-      <HistoryComponent/>
       <BrandsComponent/>
+      <HistoryComponent/>
       <MarketsComponent/>
     </div>
   </div>

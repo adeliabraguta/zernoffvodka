@@ -34,7 +34,7 @@ const toggle = (id) => {
             <p><span class="small_desc">Alcool -</span>{{ drink.specifications[0].alco }}</p>
             <p><span class="small_desc">Cantitate in cutie -</span>{{ drink.specifications[0].cant }}</p>
           </div>
-          <img class="brand" :src="drink.brand" :alt="drink.title"/>
+          <img class="slide" :src="drink.brand" :alt="drink.title"/>
         </div>
       </div>
     </div>
@@ -125,7 +125,7 @@ const toggle = (id) => {
     }
   }
 
-  .brand {
+  .slide {
     padding-top: 12px;
     border-top: 1px solid #999;
     width: min-content;

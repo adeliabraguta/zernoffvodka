@@ -1,12 +1,19 @@
 <script setup>
 
 import {markets} from "../data/data.js";
+import {onMounted, ref} from "vue";
+import {navigation} from "./navFunctions.js";
 import BackButton from "./backButton.vue";
 import NextButton from "./nextButton.vue";
-import {back, next} from "./navFunctions.js";
-import {ref} from "vue";
 
-const market = ref(null);
+const marketsRef = ref(null)
+let slider, slideWidth, sliderWidth
+
+onMounted(() => {
+  slider = marketsRef.value
+  slideWidth = slider.children[0].offsetWidth
+  sliderWidth = slider.scrollWidth - slider.offsetWidth
+})
 
 </script>
 
@@ -16,11 +23,15 @@ const market = ref(null);
       <span class="small_desc">Markets</span>
       <h2 class="big_desc">Unde cumparam</h2>
     </div>
-    <div class="brands_gallery" id="brands" ref="market">
-      <img class="market" v-for="market in markets" :src="market.logo" :alt="market.title"/>
+    <div class="slider_container">
+      <div>
+        <div class="slider_gallery" ref="marketsRef">
+          <img v-for="market in markets" :src="market.logo" :alt="market.title" class="slide"/>
+        </div>
+      </div>
     </div>
-    <BackButton @click="back(market)"/>
-    <NextButton @click="next(market)"/>
+    <BackButton #id="backBtn" @click="navigation('backBtn',slider,sliderWidth, slideWidth)"/>
+    <NextButton #id="nextBtn" @click="navigation('nextBtn',slider,sliderWidth, slideWidth)"/>
   </section>
 </template>
 
