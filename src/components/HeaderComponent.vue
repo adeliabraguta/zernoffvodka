@@ -39,11 +39,13 @@ onUnmounted(() => {
 <template>
   <header class="header" :class="{ 'transparent': !isScrolled, 'white': isScrolled, 'always_white': hasToBeChanged}">
     <div class="navigation">
-      <div v-if="userTheme === 'light-mode'">
-        <RouterLink to="/zernoffvodka/"><img src="../assets/logo.png" alt="logo"></RouterLink>
-      </div>
-      <div v-else>
-        <RouterLink to="/zernoffvodka/"><img src="../assets/logo-white.png" alt="logo"></RouterLink>
+      <div class="logo">
+        <div v-if="userTheme === 'light-mode'">
+          <RouterLink to="/zernoffvodka/"><img src="../assets/logo.png" alt="logo"></RouterLink>
+        </div>
+        <div v-else>
+          <RouterLink to="/zernoffvodka/"><img src="../assets/logo-white.png" alt="logo"></RouterLink>
+        </div>
       </div>
       <nav>
         <RouterLink to="/zernoffvodka/companie">DESPRE NOI</RouterLink>
@@ -104,6 +106,9 @@ onUnmounted(() => {
   width: 100vw;
   background-color: var(--background-color);
   z-index: 3;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   .navigation {
     padding: 12px 96px;
@@ -111,13 +116,16 @@ onUnmounted(() => {
     justify-content: center;
     align-items: center;
     gap: 96px;
-
+    .logo{
+      min-width: 170px;
+    }
     img {
       width: auto;
       height: 80px;
     }
 
     nav {
+      min-width: 400px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -169,11 +177,13 @@ onUnmounted(() => {
           cursor: pointer;
         }
       }
-.btn{
-  position: absolute;
-  top: 24px;
-  right: 84px;
-}
+
+      .btn {
+        position: absolute;
+        top: 24px;
+        right: 84px;
+      }
+
       .nav-mobile {
         width: 100vw;
         height: 100vh;
