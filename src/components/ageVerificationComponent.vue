@@ -57,9 +57,11 @@ const redirectToGoogle = () => {
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s ease;
+      border: 2px solid var(--color);
+      color: var(--color);
 
       &:hover {
-        border-color: green;
+        border: 2px solid green;
         color: green;
       }
     }
