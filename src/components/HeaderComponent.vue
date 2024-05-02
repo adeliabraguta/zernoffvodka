@@ -1,11 +1,14 @@
 <script setup>
 import {onMounted, onUnmounted, ref, watch} from "vue";
 import {useRouter} from 'vue-router';
+import {toggleTheme, userTheme} from "./userTheme.js";
+import ThemeBtn from "./themeBtn.vue";
 
 const isScrolled = ref(false);
 const hasToBeChanged = ref(false)
 const router = useRouter()
 const isShow = ref(false)
+
 
 const toggle = () => {
   isShow.value = !isShow.value
@@ -36,33 +39,58 @@ onUnmounted(() => {
 <template>
   <header class="header" :class="{ 'transparent': !isScrolled, 'white': isScrolled, 'always_white': hasToBeChanged}">
     <div class="navigation">
-      <RouterLink to="/zernoffvodka/"><img src="../assets/logo.png" alt="logo"></RouterLink>
+      <div v-if="userTheme === 'light-mode'">
+        <RouterLink to="/zernoffvodka/"><img src="../assets/logo.png" alt="logo"></RouterLink>
+      </div>
+      <div v-else>
+        <RouterLink to="/zernoffvodka/"><img src="../assets/logo-white.png" alt="logo"></RouterLink>
+      </div>
       <nav>
         <RouterLink to="/zernoffvodka/companie">DESPRE NOI</RouterLink>
         <RouterLink to="/zernoffvodka/news">NOUTATI</RouterLink>
         <RouterLink to="/zernoffvodka/catalog">CATALOG</RouterLink>
         <RouterLink to="/zernoffvodka/contacts">CONTACTE</RouterLink>
       </nav>
+      <ThemeBtn/>
     </div>
   </header>
   <header class="header-mobile" :class="{ 'transparent': !isScrolled, 'white': isScrolled, 'always_white':
   hasToBeChanged}">
     <div class="navigation">
-      <RouterLink to="/zernoffvodka/"><img src="../assets/logo.png" alt="logo"></RouterLink>
-      <button @click="toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                   stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                   stroke-linejoin="round" class="feather feather-menu icon"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+      <div v-if="userTheme === 'light-mode'">
+        <RouterLink to="/zernoffvodka/"><img src="../assets/logo.png" alt="logo"></RouterLink>
+      </div>
+      <div v-else>
+        <RouterLink to="/zernoffvodka/"><img src="../assets/logo-white.png" alt="logo"></RouterLink>
+      </div>
+      <button @click="toggle">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+             stroke-linejoin="round" class="feather feather-menu icon">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
       <Transition name="slide-fade">
-      <nav class="nav-mobile" v-if="isShow">
-        <button @click="toggle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                     stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                     stroke-linejoin="round" class="feather feather-x icon"><line x1="18" y1="6" x2="6"
-                                                                                                  y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
-        <RouterLink to="/zernoffvodka/companie" @click="toggle">DESPRE NOI</RouterLink>
-        <RouterLink to="/zernoffvodka/news" @click="toggle">NOUTATI</RouterLink>
-        <RouterLink to="/zernoffvodka/catalog" @click="toggle">CATALOG</RouterLink>
-        <RouterLink to="/zernoffvodka/contacts" @click="toggle">CONTACTE</RouterLink>
-      </nav>
+        <nav class="nav-mobile" v-if="isShow">
+          <div class="btn">
+            <ThemeBtn/>
+          </div>
+          <button @click="toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                 stroke-linejoin="round" class="feather feather-x icon">
+              <line x1="18" y1="6" x2="6"
+                    y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <RouterLink to="/zernoffvodka/companie" @click="toggle">DESPRE NOI</RouterLink>
+          <RouterLink to="/zernoffvodka/news" @click="toggle">NOUTATI</RouterLink>
+          <RouterLink to="/zernoffvodka/catalog" @click="toggle">CATALOG</RouterLink>
+          <RouterLink to="/zernoffvodka/contacts" @click="toggle">CONTACTE</RouterLink>
+        </nav>
       </Transition>
 
     </div>
@@ -74,7 +102,7 @@ onUnmounted(() => {
 .header {
   position: fixed;
   width: 100vw;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--background-color);
   z-index: 3;
 
   .navigation {
@@ -112,7 +140,7 @@ onUnmounted(() => {
     display: initial;
     position: fixed;
     width: 100vw;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--background-color);
     z-index: 3;
 
     .navigation {
@@ -126,19 +154,26 @@ onUnmounted(() => {
         width: auto;
         height: 60px;
       }
-      button{
+
+      button {
         background-color: transparent;
         border: none;
         position: absolute;
         top: 24px;
         right: 24px;
-        .icon{
+
+        .icon {
           width: 40px;
           height: 40px;
-          stroke: #222222;
+          stroke: var(--color);
           cursor: pointer;
         }
       }
+.btn{
+  position: absolute;
+  top: 24px;
+  right: 84px;
+}
       .nav-mobile {
         width: 100vw;
         height: 100vh;
@@ -148,17 +183,18 @@ onUnmounted(() => {
         flex-direction: column;
         align-items: end;
         font-size: 32px;
-        padding: 48px;
+        padding: 48px 24px 96px 48px;
         top: 0;
         right: 0;
-        background-color: #fff;
+        background-color: var(--background-color);
         justify-content: end;
         gap: 36px;
-        button{
-          .icon{
+
+        button {
+          .icon {
             width: 40px;
             height: 40px;
-            stroke: #222222;
+            stroke: var(--color);
             cursor: pointer;
           }
         }
@@ -172,11 +208,11 @@ onUnmounted(() => {
 }
 
 .white {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--color-header);
 }
 
 .always_white {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--color-header);
 }
 
 .slide-fade-enter-active, .slide-fade-leave-active {

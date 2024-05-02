@@ -65,18 +65,20 @@ const toggle = (id) => {
   }
 }
 
-  @media screen and (max-width: 800px) {
-    .catalog{
-      padding-top: 48px;
-    }
-    .drinks_catalog {
+@media screen and (max-width: 800px) {
+  .catalog {
+    padding-top: 48px;
+  }
+
+  .drinks_catalog {
+    grid-template-columns: 1fr;
+    gap: 32px;
+
+    .drink_catalog {
       grid-template-columns: 1fr;
-      gap: 32px;
-      .drink_catalog{
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
+      gap: 24px;
     }
   }
+}
 
 </style>

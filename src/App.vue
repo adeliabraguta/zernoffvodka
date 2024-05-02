@@ -5,7 +5,6 @@ import Popup from "./components/ageVerificationComponent.vue";
 import {ref} from "vue";
 
 const agreed = ref(sessionStorage.getItem('agreed') || false)
-
 </script>
 
 <template>

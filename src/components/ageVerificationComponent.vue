@@ -43,7 +43,7 @@ const redirectToGoogle = () => {
     gap: 12px;
     width: 300px;
     height: 300px;
-    background-color: #fff;
+    background-color: var(--background-color);
     padding: 48px;
 
     p {
@@ -73,10 +73,10 @@ const redirectToGoogle = () => {
       padding: 0;
       border: none;
       font-size: 16px;
-      color: #333333;
+      color: var(--color-2);
 
       &:hover {
-        color: #111111;
+        color: var(--color-1);
       }
     }
   }

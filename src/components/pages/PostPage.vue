@@ -10,48 +10,48 @@ const post = computed(() => newsArray.find(post => post.id === postId.value))
 <template>
   <div class="container">
     <div class="drink">
-      <figure><img :src="post.img" :alt="post.title"/></figure>
       <div class="drink_desc">
         <h1>{{ post.title }}</h1>
         <p>{{ post.desc }}</p>
       </div>
+      <figure><img :src="post.img" :alt="post.title"/></figure>
     </div>
   </div>
 </template>
 
 <style scoped>
 .container {
+  padding-top: 128px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   box-sizing: border-box;
 }
 
 .drink {
-  padding-top: 32px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 24px;
 
   h1 {
     letter-spacing: 1px;
+    text-align: center;
+    max-width: 900px;
   }
 
   figure {
     justify-self: center;
-    width: 600px;
-    height: 75%;
+    width: 900px;
+    height: 500px;
     padding: 12px 24px;
     display: flex;
     flex-direction: column;
-    border: 1px solid #999;
   }
 
   figure img {
-    width: auto;
+    object-fit: cover;
+    width: 900px;
     height: 500px;
   }
 
@@ -62,6 +62,8 @@ const post = computed(() => newsArray.find(post => post.id === postId.value))
 
     p {
       line-height: 28px;
+      text-align: center;
+      max-width: 900px;
     }
   }
 }

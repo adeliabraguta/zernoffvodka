@@ -2,7 +2,22 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    color: #222222;
+    --background-color: #ffffff;
+    --color: #222222;
+    --color-1: #111111;
+    --color-2: #333333;
+    --color-3: #222222;
+    --color-header: rgba(255, 255, 255, 0.8);
+    color: var(--color);
+    background-color: var(--background-color);
+}
+:root.dark-mode{
+    --color: #ffffff;
+    --color-1: #444444;
+    --background-color: #222222;
+    --color-2: #eeeeeeee;
+    --color-3: #ffffff;
+    --color-header: rgba(34, 34, 34, 0.8);
 }
 
 * {
@@ -27,12 +42,12 @@
 
 a {
     text-decoration: none;
-    color: #333;
+    color: var(--color-2);
     font-weight: 500;
     transition: all 0.3s ease;
 
     &:hover {
-        color: #111;
+        color: var(--color-1);
 
     }
 }
@@ -56,7 +71,7 @@ a {
     cursor: pointer;
 
     .feather {
-        stroke: #444;
+        stroke: var(--color-2);
         width: 50px;
         height: 50px;
         transition: all 0.3s ease;
@@ -64,7 +79,7 @@ a {
 
     &:hover {
         .feather {
-            stroke: #222;
+            stroke: var(--color-1);
         }
     }
 }

@@ -1,7 +1,8 @@
 <script setup>
 
-import {images} from "../data/data.js";
+import {images, imagesDark} from "../data/data.js";
 import {onMounted, ref} from "vue";
+import {userTheme} from "../userTheme.js";
 
 const currentSlide = ref(1)
 const getSlideCount = ref(null)
@@ -31,7 +32,14 @@ onMounted(() => {
 
 <template>
   <section class="main_section">
-    <div v-for="(img, index) in images" :key="img.id">
+    <div v-if="userTheme === 'light-mode'" v-for="(img, index) in images" :key="img.id">
+      <transition name="slide">
+        <div class="carousel_slide" v-show="currentSlide === index + 1">
+          <img :src="img.src" :alt="img.id"/>
+        </div>
+      </transition>
+    </div>
+    <div v-else v-for="(img, index) in imagesDark" :key="img.id">
       <transition name="slide">
         <div class="carousel_slide" v-show="currentSlide === index + 1">
           <img :src="img.src" :alt="img.id"/>
@@ -85,9 +93,7 @@ onMounted(() => {
 
   @media screen and (max-width: 800px) {
     padding: 90px 48px 48px 48px;
-    height: 70vh;
     .carousel_slide {
-      height: 70vh;
     }
   }
 }

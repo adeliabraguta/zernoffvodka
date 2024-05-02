@@ -42,7 +42,7 @@ const isChecked = computed({
   position: absolute;
   height: 4px;
   width: 100%;
-  background: #222;
+  background: var(--background-color);
   border-radius: 9px;
   opacity: 1;
   left: 0;

@@ -18,6 +18,9 @@ import vento from "../../assets/markets/vento.png"
 import cover from "../../assets/cover.webp"
 import cover2 from "../../assets/cover2.webp"
 import cover3 from "../../assets/cover3.webp"
+import coverDark from "../../assets/cover-dark.webp"
+import coverDark2 from "../../assets/cover-dark-2.webp"
+import coverDark3 from "../../assets/cover-dark-3.webp"
 
 export const images = [{
     id:1,
@@ -28,6 +31,17 @@ export const images = [{
 },{
     id:3,
     src: cover3
+}]
+
+export const imagesDark =[{
+    id:1,
+    src: coverDark
+},{
+    id:2,
+    src: coverDark2
+},{
+    id:3,
+    src: coverDark3
 }]
 
 export const newsArray = [{

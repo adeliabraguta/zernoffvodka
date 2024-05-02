@@ -12,9 +12,9 @@ import petrovskaiarachitele from "../../assets/catalog/petrovskaiarachitele.jpg"
 import petrovskaiared from "../../assets/catalog/petrovskaiared.jpg"
 import zernoffchocolat from "../../assets/catalog/zernoffchocolat.jpg"
 import zernoffcitron from "../../assets/catalog/zernoffcitron.jpg"
-import zernoffnamoloke from "../../assets/catalog/zernoffnamoloke.jpg"
+import zernoffnamoloke from "../../assets/catalog/zernoffnamoloke.png"
 import zernoffpomme from "../../assets/catalog/zernoffpomme.jpg"
-import zernoffsilver from "../../assets/catalog/zernoffsilver.jpg"
+import zernoffsilver from "../../assets/catalog/zernoffsilver.png"
 import zernoffmiere from "../../assets/catalog/zernoffmiere.jpg"
 
 

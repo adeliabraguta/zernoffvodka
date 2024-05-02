@@ -1,5 +1,6 @@
 <script setup>
 
+import {userTheme} from "./userTheme.js";
 </script>
 
 <template>
@@ -42,8 +43,12 @@
       </div>
     </nav>
     <div class="logo">
-      <a href="#"><img src="../assets/logo.png" alt="logo"></a>
-      <span>© 2024 Zernoff</span>
+      <div v-if="userTheme === 'light-mode'">
+        <RouterLink to="/zernoffvodka/"><img src="../assets/logo.png" alt="logo"></RouterLink>
+      </div>
+      <div v-else>
+        <RouterLink to="/zernoffvodka/"><img src="../assets/logo-white.png" alt="logo"></RouterLink>
+      </div>      <span>© 2024 Zernoff</span>
     </div>
   </footer>
 </template>
@@ -77,10 +82,10 @@ footer {
     .icon {
       width: 32px;
       height: 32px;
-      stroke: #333;
+      stroke: var(--color-2);
 
       &:hover {
-        stroke: #111;
+        stroke: var(--color-1);
       }
     }
   }

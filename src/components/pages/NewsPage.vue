@@ -32,11 +32,11 @@ import {newsArray} from "../data/data.js";
 
   .news {
     padding-top: 24px;
-    display: grid;
-    grid-template-columns:minmax(400px, 1fr) repeat(auto-fill, minmax(300px, min-content));
-    grid-template-rows: auto;
+    display: flex;
+    flex-wrap: wrap;
     column-gap: 48px;
     row-gap: 24px;
+    justify-content: center;
     @media screen and (max-width: 800px) {
       grid-template-columns: repeat(auto-fill, minmax(300px, min-content));
     }
@@ -47,6 +47,8 @@ import {newsArray} from "../data/data.js";
     padding-bottom: 12px;
     transition: all 0.3s ease;
     cursor: pointer;
+    max-width: 400px;
+
 
     &:hover {
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -55,6 +57,7 @@ import {newsArray} from "../data/data.js";
     img {
       height: auto;
       width: 100%;
+      object-fit: cover;
     }
 
     h3 {
@@ -64,9 +67,11 @@ import {newsArray} from "../data/data.js";
     &:first-of-type {
       padding: 0;
       position: relative;
+      max-width: 550px;
+
 
       h3 {
-        color: #fff;
+        color: var(--color);
         position: absolute;
         bottom: 40px;
         left: 40px;
@@ -74,7 +79,7 @@ import {newsArray} from "../data/data.js";
       }
 
       img {
-        height: 300px;
+        height: 100%;
         width: 100%;
         transition: all 0.3s ease;
       }

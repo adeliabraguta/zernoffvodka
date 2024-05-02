@@ -56,7 +56,6 @@ figure:hover img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  grid-auto-rows: min-content;
   gap: 48px;
 
   .drink_desc {
