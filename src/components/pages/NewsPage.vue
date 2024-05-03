@@ -63,35 +63,6 @@ import {newsArray} from "../data/data.js";
     h3 {
       padding: 12px;
     }
-
-    &:first-of-type {
-      padding: 0;
-      position: relative;
-      max-width: 550px;
-
-
-      h3 {
-        color: var(--color);
-        position: absolute;
-        bottom: 40px;
-        left: 40px;
-        font-size: 32px;
-      }
-
-      img {
-        height: 100%;
-        width: 100%;
-        transition: all 0.3s ease;
-      }
-
-      &:hover {
-        box-shadow: none;
-
-        img {
-          opacity: 0.8;
-        }
-      }
-    }
   }
 
 }

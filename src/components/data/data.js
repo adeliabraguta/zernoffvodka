@@ -1,4 +1,4 @@
-import noutati1 from "../../assets/noutati-1.jpg";
+import noutati1 from "../../assets/history-gallery-4.jpg";
 import noutati2 from "../../assets/noutati-2.jpg";
 import noutati3 from "../../assets/noutati-3.png";
 

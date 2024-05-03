@@ -1,7 +1,7 @@
 <script setup>
 import {onMounted, onUnmounted, ref, watch} from "vue";
 import {useRouter} from 'vue-router';
-import {toggleTheme, userTheme} from "./userTheme.js";
+import {userTheme} from "./userTheme.js";
 import ThemeBtn from "./themeBtn.vue";
 
 const isScrolled = ref(false);
@@ -104,7 +104,6 @@ onUnmounted(() => {
 .header {
   position: fixed;
   width: 100vw;
-  background-color: var(--background-color);
   z-index: 3;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -148,7 +147,6 @@ onUnmounted(() => {
     display: initial;
     position: fixed;
     width: 100vw;
-    background-color: var(--background-color);
     z-index: 3;
 
     .navigation {
