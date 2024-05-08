@@ -1,0 +1,1 @@
+const s="/zernoffvodka/assets/history-gallery-2-DdEylQ9W.jpg",o="/zernoffvodka/assets/history-gallery-1-BbCZHGoW.jpg",a="/zernoffvodka/assets/history-gallery-3-CO2OSy05.jpg";export{s as _,o as a,a as b};
