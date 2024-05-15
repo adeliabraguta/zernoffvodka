@@ -11,7 +11,8 @@ const router = createRouter({
         {path: `/zernoffvodka/companie`, name: 'about', component: () => import('./components/pages/AboutPage.vue')},
         {path: `/zernoffvodka/news`, name: 'news', component: () => import('./components/pages/NewsPage.vue')},
         {path: `/zernoffvodka/post/:id`, name: 'post', component: () => import('./components/pages/PostPage.vue')},
-        {path: '/zernoffvodka/contacts', name: 'contacts', component: () => import('./components/pages/ContactsPage.vue')}
+        {path: '/zernoffvodka/contacts', name: 'contacts', component: () => import('./components/pages/ContactsPage.vue')},
+        {path: '/zernoffvodka/awards', name: 'awards', component: () => import('./components/pages/AwardsPage.vue')}
     ],
     scrollBehavior(to, from, savedPosition) {
         return new Promise((resolve, reject) => {

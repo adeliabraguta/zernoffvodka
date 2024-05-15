@@ -5,6 +5,7 @@ import HistoryComponent from "../MainPageComponents/HistoryComponent.vue";
 import BrandsComponent from "../MainPageComponents/BrandsComponent.vue";
 import MarketsComponent from "../MainPageComponents/MarketsComponent.vue";
 import MainComponent from "../MainPageComponents/MainComponent.vue";
+import AwardsComponent from "../MainPageComponents/AwardsComponent.vue";
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import MainComponent from "../MainPageComponents/MainComponent.vue";
       <HistoryComponent/>
       <BrandsComponent/>
       <TopDrinksComponent/>
+      <AwardsComponent/>
       <MarketsComponent/>
     </div>
   </div>

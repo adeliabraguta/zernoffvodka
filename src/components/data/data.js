@@ -69,7 +69,7 @@ export const newsArray = [{
     imgs: [noutati1]
 }, {
     id: 2,
-    title: 'ZERNOFF VODKA PARTICIPĂ LA PROWEIN CHINA 2016',
+    title: 'ZERNOFF VODKA PARTICIPĂ LA PROWEIN CHINA',
     desc: 'In cadrul expoziției, ProWein China 2016, care este un eveniment unic în domeniul profesional comercial, compania “Zernoff Vodca“ a prezentat cele mai bune branduri premium din portofoliul său: vodca Mendeleev și vodca Petrovsckaia. Stand-ul companiei era amplasat în centrul expoziției având o prezență emoțională și atrăgătoare.\n' +
         '\n' +
         'Oaspeții stand-lui “Zernoff Vodca” au apreciat calitatea înaltă a produselor degustate. O atenție deosebită' +

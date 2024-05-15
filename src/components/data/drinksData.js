@@ -443,23 +443,11 @@ export const brandsArray = [{
     id: 1,
     src: zernoffLogo
 },{
-    id: 2,
-    src: campohLogo
-},{
     id: 3,
     src: gospodarLogo
 },{
-    id: 4,
-    src: jacksonLogo
-},{
-    id: 5,
-    src: mamboLogo
-},{
     id: 6,
     src: mendeleevLogo
-},{
-    id: 7,
-    src: nuculLogo
 },{
     id: 8,
     src: personaLogo
@@ -470,9 +458,6 @@ export const brandsArray = [{
     id: 10,
     src: psenicinaiaLogo
 },{
-    id: 11,
-    src: rihardsLogo
-},{
     id: 12,
     src: russkaiaLogo
 },{
@@ -481,7 +466,4 @@ export const brandsArray = [{
 },{
     id: 14,
     src: spiculLogo
-},{
-    id: 15,
-    src: parrotLogo
 }]

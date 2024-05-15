@@ -22,7 +22,7 @@ onMounted(() => {
   <section class="brands_section">
     <div class="brands_title">
       <span class="small_desc">Branduri</span>
-      <h2 class="big_desc">Brandurile care producem</h2>
+      <h2 class="big_desc">Brandurile pe care producem</h2>
       <p>Cele mai bune ingrediente, procesul de fabricație de ultimă generație și controlul special al calității
         vizează
         atingerea gustului de neegalat al mărcilor noastre.</p>
