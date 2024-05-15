@@ -18,7 +18,7 @@ const toggle = (id) => {
     <div class="catalog">
       <span class="small_desc ">Catalog</span>
       <div>
-        <h2 class="big_desc">Zernoff</h2>
+        <h2 id="zernoff" class="big_desc">Zernoff</h2>
         <div class="drinks_catalog">
           <div class="drink_catalog" v-for="drink of zernoffDrinks[0]" :key="drink.id" @click="()=> toggle(drink.id)"
                :class="{[`show`]: isShow[drink.id]}">
@@ -27,9 +27,65 @@ const toggle = (id) => {
         </div>
       </div>
       <div>
-        <h2 class="big_desc">Petrovskaia</h2>
+        <h2 id="petrovskaia" class="big_desc">Petrovskaia</h2>
         <div class="drinks_catalog">
           <div class="drink_catalog" v-for="drink of zernoffDrinks[1]" :key="drink.id">
+            <DrinkComponent :drink="drink"/>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 id="mendeleev" class="big_desc">Mendeleev</h2>
+        <div class="drinks_catalog">
+          <div class="drink_catalog" v-for="drink of zernoffDrinks[2]" :key="drink.id">
+            <DrinkComponent :drink="drink"/>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 id="spicul de aur" class="big_desc">Spicul de Aur</h2>
+        <div class="drinks_catalog">
+          <div class="drink_catalog" v-for="drink of zernoffDrinks[3]" :key="drink.id">
+            <DrinkComponent :drink="drink"/>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 id="gospodar" class="big_desc">Gospodar</h2>
+        <div class="drinks_catalog">
+          <div class="drink_catalog" v-for="drink of zernoffDrinks[4]" :key="drink.id">
+            <DrinkComponent :drink="drink"/>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 id="psenicinaia" class="big_desc">Psenicinaia</h2>
+        <div class="drinks_catalog">
+          <div class="drink_catalog" v-for="drink of zernoffDrinks[5]" :key="drink.id">
+            <DrinkComponent :drink="drink"/>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 id="russkaia" class="big_desc">Russkaia</h2>
+        <div class="drinks_catalog">
+          <div class="drink_catalog" v-for="drink of zernoffDrinks[6]" :key="drink.id">
+            <DrinkComponent :drink="drink"/>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 id="secarica" class="big_desc">Secarica</h2>
+        <div class="drinks_catalog">
+          <div class="drink_catalog" v-for="drink of zernoffDrinks[7]" :key="drink.id">
+            <DrinkComponent :drink="drink"/>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 id="persona" class="big_desc">Persona</h2>
+        <div class="drinks_catalog">
+          <div class="drink_catalog" v-for="drink of zernoffDrinks[8]" :key="drink.id">
             <DrinkComponent :drink="drink"/>
           </div>
         </div>
@@ -41,6 +97,16 @@ const toggle = (id) => {
 <style scoped>
 .catalog {
   padding-top: 24px;
+}
+
+.brands{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  img{
+    cursor: pointer;
+  }
 }
 
 .drinks_catalog {
@@ -63,6 +129,7 @@ const toggle = (id) => {
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
   }
+
 }
 
 @media screen and (max-width: 800px) {

@@ -1,21 +1,29 @@
 import zernoffvodka from "../../assets/catalog/zernoff-vodka.png";
-import richards from "../../assets/catalog/richards.png";
 import mendeleev from "../../assets/catalog/mendeleev.png";
-import petrovskaia from "../../assets/catalog/petrovskaia.jpg"
-import petrovskaiaapple from "../../assets/catalog/petrovskaiaapple.jpg"
-import petrovskaiacherry from "../../assets/catalog/petrovskaiacherry.jpg"
-import petrovskaiachocolate from "../../assets/catalog/petrovskaiachocolate.jpg"
-import petrovskaiacranberry from "../../assets/catalog/petrovskaiacranberry.jpg"
-import petrovskaialemon from "../../assets/catalog/petrovskaialemon.jpg"
-import petrovskaiapremium from "../../assets/catalog/petrovskaiapremium.jpg"
-import petrovskaiarachitele from "../../assets/catalog/petrovskaiarachitele.jpg"
-import petrovskaiared from "../../assets/catalog/petrovskaiared.jpg"
-import zernoffchocolat from "../../assets/catalog/zernoffchocolat.jpg"
-import zernoffcitron from "../../assets/catalog/zernoffcitron.jpg"
+import petrovskaia from "../../assets/catalog/petrovskaia.png"
+import petrovskaiaapple from "../../assets/catalog/petrovskaiaapple.png"
+import petrovskaiacherry from "../../assets/catalog/petrovskaiacherry.png"
+import petrovskaiachocolate from "../../assets/catalog/petrovskaiachocolate.png"
+import petrovskaiacranberry from "../../assets/catalog/petrovskaiacranberry.png"
+import petrovskaialemon from "../../assets/catalog/petrovskaialemon.png"
+import petrovskaiapremium from "../../assets/catalog/petrovskaiapremium.png"
+import petrovskaiarachitele from "../../assets/catalog/petrovskaiarachitele.png"
+import petrovskaiared from "../../assets/catalog/petrovskaiared.png"
+import zernoffchocolat from "../../assets/catalog/zernoffchocolat.png"
+import zernoffcitron from "../../assets/catalog/zernoffcitron.png"
 import zernoffnamoloke from "../../assets/catalog/zernoffnamoloke.png"
-import zernoffpomme from "../../assets/catalog/zernoffpomme.jpg"
+import zernoffpomme from "../../assets/catalog/zernoffpomme.png"
 import zernoffsilver from "../../assets/catalog/zernoffsilver.png"
-import zernoffmiere from "../../assets/catalog/zernoffmiere.jpg"
+import zernoffmiere from "../../assets/catalog/zernoffmieresiardei.png"
+import gospodar from "../../assets/catalog/gospodar.png"
+import gospodarmieresiardei from "../../assets/catalog/gospodarmieresiardei.png"
+import personawhite from "../../assets/catalog/personawhite.png"
+import personared from "../../assets/catalog/personared.png"
+import psenicinaia from "../../assets/catalog/psenicinaia.png"
+import russkaia from "../../assets/catalog/russkaia.png"
+import secarica from "../../assets/catalog/secarica.png"
+import spiculdeaurclasic from "../../assets/catalog/spiculdeaurclasic.png"
+import spiculdeaurpremium from "../../assets/catalog/spiculdeaurpremium.png"
 
 
 import campohLogo from "../../assets/brands/campoh-logo.png"
@@ -48,19 +56,18 @@ export const topDrinks = [{
     brand: zernoffLogo,
     isShow: false
 }, {
-    id: 2,
-    title: "Rihards",
-    type: "Whisky & Rom",
-    img: richards,
-    volume: '0.5L, 1L',
+    id: 8,
+    title: "Petrovskaia Premium",
+    type: "Vodka",
+    img: petrovskaiapremium,
+    volume: '0.5L, 1L , 1.75L',
     desc:
-        'Bautura alcoolica tare. Tehnologia de preparare corespunde metodelor moderne de producție industrială. Gustul moale este dominat de vanilie și nuanțe lemnoase, iar aroma conține note florale și picante. Perfect ca un aperitiv.',
+        'Vodcă clasică, creată exclusiv din componente de înaltă calitate. Petrovskaia Platinum este produsă din spirt de înaltă calitate și apă cristalină. Acest alcool are o culoare limpede ca cristalul, tăria băuturii fiind perfect echilibrată, iar gustul său este distinct și rafinat, cu note subtile de cereale și un finisaj delicat.',
     specifications: [{
         alco: '40%',
-        cant: '6 buc.'
+        cant: '9 buc.'
     }],
-    brand: zernoffLogo,
-    isShow: false
+    brand: petrovskaiaLogo
 }, {
     id: 3,
     title: "Mendeleev",
@@ -284,6 +291,151 @@ export const zernoffDrinks = [[{
             cant: '6 buc.'
         }],
         brand: petrovskaiaLogo
+    }
+],[
+    {
+        id: 17,
+        title: "Mendeleev",
+        type: "Vodka",
+        img: mendeleev,
+        volume: '0.2L, 0.5L, 0.7L',
+        desc:
+            ' Mendeleev Vodka este produsă după o formula perfecta înaintată de savantul Dimitrii Mendeleev.  Trecută prin șapte etape de filtrare, Mendeleev Vodka are la bază cea mai pură apă în amestec cu cele mai înalte soiuri de grâu și distilată de mai multe ori pentru a obține o calitate superioară, oferind o experiență unică și rafinată la fiecare pahar.',
+        specifications: [{
+            alco: '40%',
+            cant: '6 buc.'
+        }],
+        brand: mendeleevLogo
+    }
+],[
+    {
+        id: 18,
+        title: "Spicul de Aur Clasic",
+        type: "Vodka",
+        img: spiculdeaurclasic,
+        volume: '0.25L, 0.5L, 1L',
+        desc:
+            ' Vodca este produsă după o reţetă specială din alcool de grâu "Lux" de calitate superioară şi din apă epurată după o tehnologie specială. Are un gust plăcut şi aromă rafinată de vodcă. Transparenţa cristalină şi luciul dat de filtrarea atentă conferă o eleganță distinctă băuturii.',
+        specifications: [{
+            alco: '40%',
+            cant: '6 buc.'
+        }],
+        brand: spiculLogo
+    },
+    {
+        id: 19,
+        title: "Spicul de Aur Premium",
+        type: "Vodka",
+        img: spiculdeaurpremium,
+        volume: '0.5L, 1L',
+        desc:
+            ' Vodcă Spicul de Aur Premium este produsă conform rețetei originale din alcool de grâu de înaltă calitate și apă potabilă. Este varianta exclusivă vodcii, care deja a câştigat popularitatea. Se distinge printr-un "aur spic" deosebit de fin, cu gust echilibrat și o aroma distinsă, aducând un sentiment de lux și rafinament în fiecare înghițitură.',
+        specifications: [{
+            alco: '40%',
+            cant: '6 buc.'
+        }],
+        brand: spiculLogo
+    }
+],[
+    {
+        id: 20,
+        title: "Gospodar",
+        type: "Vodka",
+        img: gospodar,
+        volume: '0.2L, 0.5L',
+        desc:
+            ' O vodcă clasică ușoară, produsă din cele mai înalte soiuri de secară și alcool clasa Lux. Un gospodar bun se vede de afară, iar o vodcă bună după un gospodar bun.',
+        specifications: [{
+            alco: '38%',
+            cant: '12 buc.'
+        }],
+        brand: gospodarLogo
+    },{
+        id: 21,
+        title: "Gospodar Miere și Ardei",
+        type: "Vodka",
+        img: gospodarmieresiardei,
+        volume: '0.1L, 0.2L, 0.5L',
+        desc:
+            ' O asociere reușită și expresivă dintre piper și miere. Compoziția de vodca include infuzie de boabe de grâu germinate, miere, infuzie de piper și alte ingrediente selecte, creând astfel o băutură cu arome complexe și echilibrate, perfectă pentru momente de rafinament și savoare intensă.',
+        specifications: [{
+            alco: '40%',
+            cant: '12 buc.'
+        }],
+        brand: gospodarLogo
+    }
+],[
+    {
+        id: 22,
+        title: "Pșenicinaia Vodka",
+        type: "Vodka",
+        img: psenicinaia,
+        volume: '0.09L, 0.2L, 0.375L, 0.5L',
+        desc:
+            ' La producerea vodcăi Pșenicinaia am ales cele mai înalte soiuri de secară, și datorită metodelor tradiționale de producție, am păstrat gustul ideal al vodcii clasice. Rafinată, ușoară, produsă din alcool clasa "Lux" și distilată de mai multe ori pentru a asigura o puritate și o calitate superioară.',
+        specifications: [{
+            alco: '40%',
+            cant: '12 buc.'
+        }],
+        brand: psenicinaiaLogo
+    }
+],[
+    {
+        id: 23,
+        title: "Russkaia",
+        type: "Vodka",
+        img: russkaia,
+        volume: '0.09L, 0.25L, 0.5L, 1L',
+        desc:
+            ' În procesul de fabricație a vodcăi Russkaia se folosesc tehnici tradiționale și ingrediente de cea mai înaltă calitate, conferindu-i astfel un gust distinct și o calitate superioară. Russkaia vodka este renumită pentru gustul său distinct și calitatea superioară, datorită tehnicii tradiționale și ingredientelor de cea mai înaltă calitate folosite în producție.',
+        specifications: [{
+            alco: '40%',
+            cant: '12 buc.'
+        }],
+        brand: russkaiaLogo
+    }
+],[
+    {
+        id: 24,
+        title: "Secărică",
+        type: "Vodka",
+        img: secarica,
+        volume: '0.1L, 0.2L, 0.375L, 0.5L',
+        desc:
+            ' Produs exclusiv din secară de calitate superioară cu gust deosebit de pesmeți de secară și o aroma fină. Metodă tradițională de producere păstrate de ani de zile combinată perfect cu tehnologiile de ultimă generație. Unde nu e loc de vorbă, e loc de o Secărică!',
+        specifications: [{
+            alco: '40%',
+            cant: '12 buc.'
+        }],
+        brand: secaricaLogo
+    }
+],[
+    {
+        id: 25,
+        title: "Persona White",
+        type: "Vodka",
+        img: personawhite,
+        volume: '0.25L, 0.5L, 1L',
+        desc:
+            ' Persona white vodka, o alegere clasică pentru momentele de relaxare și distracție, cu gustul său proaspăt și rafinat, este preferată de mulți pentru experiențe de neuitat. Realizată din alcool din cereale și folosind tehnologia de producție de ultimă generație, care garantează puritatea și calitatea superioară a fiecărei picături, această băutură devine un simbol al eleganței și rafinamentului în lumea băuturilor fine.',
+        specifications: [{
+            alco: '40%',
+            cant: '9 buc.'
+        }],
+        brand: personaLogo
+    },{
+        id: 26,
+        title: "Persona Red",
+        type: "Vodka",
+        img: personared,
+        volume: '0.25L, 0.5L, 1L',
+        desc:
+            ' Persona Red este o băutură alcoolică puternic aromatizată, cu un conținut de alcool de 40%, caracterizată de o nuanță distinctă și arome bogate și complexe, perfecta pentru cei ce apreciază gustul intens și rafinat care învăluie simțurile și stimulează plăcerea gustului.',
+        specifications: [{
+            alco: '40%',
+            cant: '9 buc.'
+        }],
+        brand: personaLogo
     }
 ]]
 

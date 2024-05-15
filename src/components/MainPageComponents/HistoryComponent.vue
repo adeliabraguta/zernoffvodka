@@ -5,14 +5,14 @@
 <template>
   <section class="history_section">
     <h2 class="big_desc">ISTORIA</h2>
-    <p>In perioada 95-96 un grup de specialisti si-au unit fortele pentru a forma ulterior una din cele mai mari
-      fabrici de producere si imbutiliere a votcii.</p>
-    <p>Ideea a venit pentru a aduce consumatorului un produs autohton numai din grau - Vodka. Sectorul de productie
-      a
-      inceput cu o mica unitate de imbuteliere, care in 2001 ajuns sa produca cel mai popular brand de vodka-
-      GOSPODAR.</p>
-    <p>Cresterea numarului vanzarilor a determinat necesitatea de a construi o noua fabrica cu o capacitate mai mare
-      de productie. Astazi uzina produce in jur de 100 t pe zi.</p>
+    <p>În 1995, un grup de specialiști cu o viziune îndrăzneață și pasiune pentru calitate s-au unit pentru a da viață
+      unei idei ambițioase: să creeze cea mai mare fabrică de producție a vodcii în Moldova.</p>
+    <p>Pornind de la ideea de a revoluționa industria și de a oferi un produs complet nou, bazat pe ingrediente
+      naturale, ei au pus bazele companiei Zernoff.</p>
+    <p>Astăzi, visul lor s-a transformat în realitate. Zernoff s-a impus ca un lider în industria băuturilor alcoolice,
+      stabilind noi standarde de excelență în producție. Cu o capacitate zilnică de peste 100 de tone de vodcă și unele
+      dintre cele mai apreciate mărci din Moldova, Zernoff Beverages continuă să ofere consumatorilor din întreaga lume
+      o experiență autentică și rafinată.</p>
     <div>
       <figure><img src="../../assets/history-gallery-2.jpg" alt="fabrica zernoff"/></figure>
       <figure><img class="img_2" src="../../assets/history-gallery-1.jpg" alt="fabrica zernoff"/></figure>

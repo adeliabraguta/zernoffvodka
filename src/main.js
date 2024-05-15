@@ -4,7 +4,7 @@ import App from './App.vue'
 import {createRouter, createWebHistory} from "vue-router";
 
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
+    history: createWebHistory(),
     routes:  [
         {path: '/zernoffvodka/', name: 'MainPage', component: () => import('./components/pages/MainPage.vue')},
         {path: '/zernoffvodka/catalog', name: 'catalog', component: () => import('./components/pages/CatalogPage.vue')},

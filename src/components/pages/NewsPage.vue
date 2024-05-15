@@ -7,8 +7,8 @@ import {newsArray} from "../data/data.js";
     <div class="news_container">
       <h1 class="big_desc">NEWS</h1>
       <div class="news">
-        <RouterLink class="post" v-for="post of newsArray" :key="post.id" :to="{name:'post', params:{id: post.id}}">
-          <img :src="post.img" :alt="post.title">
+        <RouterLink class="post" v-for="post of newsArray.reverse()" :key="post.id" :to="{name:'post', params:{id: post.id}}">
+          <img :src="post.imgs[0]" :alt="post.title">
           <h3>{{ post.title }}</h3>
         </RouterLink>
       </div>
@@ -55,7 +55,7 @@ import {newsArray} from "../data/data.js";
     }
 
     img {
-      height: auto;
+      height: 250px;
       width: 100%;
       object-fit: cover;
     }

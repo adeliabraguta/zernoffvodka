@@ -14,7 +14,9 @@ const post = computed(() => newsArray.find(post => post.id === postId.value))
         <h1>{{ post.title }}</h1>
         <p>{{ post.desc }}</p>
       </div>
-      <figure><img :src="post.img" :alt="post.title"/></figure>
+      <div class="images">
+        <img v-for="img in post.imgs" :src="img" :alt="post.title"/>
+      </div>
     </div>
   </div>
 </template>
@@ -32,27 +34,25 @@ const post = computed(() => newsArray.find(post => post.id === postId.value))
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 48px;
 
   h1 {
     letter-spacing: 1px;
     text-align: center;
-    max-width: 900px;
+    max-width: 1000px;
   }
 
-  figure {
-    justify-self: center;
-    width: 900px;
-    height: 500px;
-    padding: 12px 24px;
+  .images {
     display: flex;
-    flex-direction: column;
-  }
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
 
-  figure img {
-    object-fit: cover;
-    width: 900px;
-    height: 500px;
+    img {
+      object-fit: cover;
+      width: auto;
+      height: 500px;
+    }
   }
 
   .drink_desc {
@@ -63,7 +63,7 @@ const post = computed(() => newsArray.find(post => post.id === postId.value))
     p {
       line-height: 28px;
       text-align: center;
-      max-width: 900px;
+      max-width: 1000px;
     }
   }
 }
@@ -76,20 +76,12 @@ const post = computed(() => newsArray.find(post => post.id === postId.value))
   .drink {
     grid-template-columns: 1fr;
 
-    figure {
-      justify-self: center;
-      width: 300px;
-      height: 200px;
-      padding: 12px 24px;
-      display: flex;
-      flex-direction: column;
-      border: none;
-    }
-
-    figure img {
-      object-fit: cover;
-      width: 300px;
-      height: 250px;
+    .images {
+      img {
+        object-fit: cover;
+        width: auto;
+        height: 250px;
+      }
     }
   }
 }

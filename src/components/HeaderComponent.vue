@@ -26,6 +26,7 @@ const handleScroll = () => {
 watch(() => router.currentRoute.value, () => {
   handleScroll();
 });
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
 });

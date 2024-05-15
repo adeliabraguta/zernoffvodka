@@ -12,9 +12,9 @@ import MainComponent from "../MainPageComponents/MainComponent.vue";
     <MainComponent/>
     <AboutUsComponent/>
     <div class="container">
-      <TopDrinksComponent/>
-      <BrandsComponent/>
       <HistoryComponent/>
+      <BrandsComponent/>
+      <TopDrinksComponent/>
       <MarketsComponent/>
     </div>
   </div>

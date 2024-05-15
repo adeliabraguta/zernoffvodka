@@ -7,26 +7,25 @@
     <div>
       <span class="small_desc">Despre Noi</span>
       <h1 class="big_desc">ZERNOFF VODKA - 100% brand autohton.</h1>
-      <p><b>ZERNOFF VODKA</b> este un complex industrial de producție cu ciclu complet, incluzând prelucrarea
-        cerealelor
-        selectate, producerea alcoolului de înaltă calitate și îmbutelierea produselor finite.
+      <p><b>ZERNOFF VODKA</b> este un simbol al excelenței și al tradiției locale, având o uzină proprie de producție a
+        etanolului în Moldova, care asigură controlul total al calității de la materiile prime la produsul finit.
       </p>
-      <p> Calitatea înaltă a vodcăi este rezultatul utilizării echipamentelor moderne și tehnologiilor inovatoare. Una
-        dintre aceste inovații a fost crearea unei rețete unice din 5 elemente organice - ovăz, orz, orez, grâu și
-        secară, care combină efectele tonifierii și întăririi imunității.
+      <p> Toată materia primă este cultivată și prelucrată local, garantând prospețime și autenticitate în fiecare
+        sticlă de vodka Zernoff.
+        Prin utilizarea echipamentelor moderne și a tehnologiilor inovatoare, <b>ZERNOFF VODKA</b> se distinge prin
+        calitatea
+        și gustul său inconfundabil.
       </p>
-      <p> Compania acordă o atenție deosebită calității produselor sale. În compoziția vodcăi <b>ZERNOFF</b> sunt
-        incluse
-        numai
-        spirturi de producere proprie. Absolut toate produsele sunt făcute cu respectarea tuturor standardelor de stat
-        și internaționale, inclusiv ISO9001 și sunt supuse celui mai strict control al calității, în toate etapele de
-        producție. În complexul industrial "<b>ZERNOFF</b>" se află laboratorul de testare acreditat.
+      <p> Rețeta unică a vodcăi, alcătuită din 5 elemente organice - ovăz, orz, orez, grâu și secară - este rezultatul
+        cercetării și dezvoltării continue, oferind o experiență gustativă rafinată și autentică.
+        Cu fiecare înghițitură, <b>ZERNOFF VODKA</b> aduce o bucată din inima Moldovei în casele și în inimile celor care
+        apreciază adevărata valoare a produselor locale de înaltă calitate.
       </p>
       <p>
         <RouterLink to="/zernoffvodka/companie">Vezi mai mult ></RouterLink>
       </p>
     </div>
-    <img src="../../assets/cocktails.jpg" alt="cocktails"/>
+    <img src="../../assets/cover7.jpg" alt="cocktails"/>
   </section>
 </template>
 
